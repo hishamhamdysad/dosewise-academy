@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Filter for subtle drop shadow -->
+    <filter id="subtleShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284C7" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Left Emblem / Crest -->
+  <g transform="translate(20, 10)">
+    <!-- Outer Shield / Hexagon Frame -->
+    <path d="M70,5 L125,32 L125,102 Q125,138 70,145 Q15,138 15,102 L15,32 Z" 
+          fill="url(#shieldGrad)" stroke="url(#cyanGrad)" stroke-width="3" filter="url(#subtleShadow)" />
+
+    <!-- Inner Shield Inset -->
+    <path d="M70,16 L114,38 L114,96 Q114,126 70,133 Q26,126 26,96 L26,38 Z" 
+          fill="#0B132B" opacity="0.85" />
+
+    <!-- Stylized Academic Cap Top & Medical Cross Nexus -->
+    <!-- Cap Diamond -->
+    <polygon points="70,30 102,46 70,62 38,46" fill="url(#cyanGrad)" />
+    <!-- Cap Skull Base -->
+    <path d="M48,53 L48,68 Q70,82 92,68 L92,53" fill="none" stroke="#38BDF8" stroke-width="2.5" />
+    <!-- Tassel -->
+    <path d="M100,47 Q106,62 104,74" fill="none" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="104" cy="76" r="3" fill="#FBBF24" />
+
+    <!-- Medical Caduceus / Capsule & Pulse Wave -->
+    <g transform="translate(0, 15)">
+      <!-- Central Pill / Capsule Symbol -->
+      <path d="M60,65 Q60,54 70,54 Q80,54 80,65 L80,95 Q80,106 70,106 Q60,106 60,95 Z" 
+            fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="60" y1="80" x2="80" y2="80" stroke="#38BDF8" stroke-width="2.5" />
+      <path d="M60,65 Q60,54 70,54 Q80,54 80,65 L80,80 L60,80 Z" fill="url(#cyanGrad)" opacity="0.6" />
+
+      <!-- Ecg / Pulse Heartbeat Wave across capsule -->
+      <path d="M35,80 L52,80 L57,70 L63,94 L68,66 L74,90 L79,80 L105,80" 
+            fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Orbit Ring / Knowledge Glow -->
+    <ellipse cx="70" cy="80" rx="56" ry="18" fill="none" stroke="url(#cyanGrad)" stroke-width="1.8" stroke-dasharray="6,4" transform="rotate(-25, 70, 80)" />
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- Arabic Primary Title -->
+  <text x="175" y="65" font-family="'Cairo', 'Alexandria', 'Segoe UI', Tahoma, sans-serif" font-size="34" font-weight="800" fill="#0F172A" letter-spacing="0.5">
+    أكاديمية <tspan fill="#0D9488">دوز</tspan><tspan fill="#0284C7"> وايز</tspan>
+  </text>
+
+  <!-- Arabic Subtitle -->
+  <text x="175" y="93" font-family="'Cairo', 'Segoe UI', Tahoma, sans-serif" font-size="14.5" font-weight="600" fill="#475569">
+    مركز التدريب والتعليم الطبي والمهني المعتمد
+  </text>
+
+  <!-- English Brand Line -->
+  <text x="175" y="124" font-family="'Inter', 'Montserrat', 'Segoe UI', sans-serif" font-size="16" font-weight="800" fill="#0F172A" letter-spacing="3.5">
+    DOSE<tspan fill="#06B6D4">WISE</tspan> <tspan fill="#0D9488">ACADEMY</tspan>
+  </text>
+
+  <!-- Accent Divider line with gradient -->
+  <rect x="175" y="103" width="380" height="2.5" rx="1.25" fill="url(#cyanGrad)" />
+
+  <!-- Certified Badge Ribbon text -->
+  <text x="175" y="142" font-family="'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#64748B" letter-spacing="1.5">
+    HEALTHCARE & PROFESSIONAL TRAINING SYSTEM
+  </text>
+</svg>
