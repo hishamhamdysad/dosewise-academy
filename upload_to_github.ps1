@@ -25,9 +25,12 @@ if (-not (Test-Path ".git")) {
 # 3. Add and commit files
 Write-Host "[*] تجهيز ملفات المشروع..." -ForegroundColor Green
 git add .
-
-Write-Host "[*] حفظ التعديلات (Commit)..." -ForegroundColor Green
-git commit -m "DoseWise Academy Production Deployment"
+$status = git status --porcelain
+if ($status) {
+    git commit -m "DoseWise Academy Production Deployment"
+} else {
+    Write-Host "[*] كافة ملفات المشروع محفوظة وجاهزة للرفع." -ForegroundColor Green
+}
 
 Write-Host ""
 Write-Host "========================================================" -ForegroundColor Cyan
